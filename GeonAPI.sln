@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{29749CAD-38B8-41F8-9D99-96B625172AE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BF03B992-209B-4107-9B6B-45D6B6F25B62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A38BE631-EFE4-4E9B-81F6-FFFD4213EFC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeonAPI.Domain", "Core\GeonAPI.Domain\GeonAPI.Domain.csproj", "{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {015C4379-EBFC-4DB0-951F-F0BCBD80C503}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5} = {BF03B992-209B-4107-9B6B-45D6B6F25B62}
+	EndGlobalSection
+EndGlobal

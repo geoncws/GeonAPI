@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeonAPI.Domain", "Core\GeonAPI.Domain\GeonAPI.Domain.csproj", "{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeonAPI.Application", "Core\GeonAPI.Application\GeonAPI.Application.csproj", "{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FBF97A4E-7D76-4F3F-ADDF-9641C247A5C5} = {BF03B992-209B-4107-9B6B-45D6B6F25B62}
+		{CF7EDA6D-3F6C-49EC-A95B-F05E44F11092} = {BF03B992-209B-4107-9B6B-45D6B6F25B62}
 	EndGlobalSection
 EndGlobal

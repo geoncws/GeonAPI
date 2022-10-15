@@ -3,10 +3,9 @@ namespace GeonAPI.Domain.Entities.Common
 {
     public class BaseEntity
     {
+        public Guid Id { get; set; }
 
-        public string Id { get; set; }
-
-        public object MyProperty { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }
-

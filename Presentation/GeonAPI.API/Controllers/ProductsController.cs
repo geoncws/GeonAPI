@@ -12,16 +12,6 @@ namespace GeonAPI.API.Controllers
     [Route("api/[controller]")]
     public class ProductsController : Controller
     {
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] Pagination pagination)
-        {
-            return Ok("Test edildi");
-        }
-        [HttpGet]
-        public async Task<IActionResult> Post()
-        {
-            return Ok("Hasanca");
-        }
+
     }
 }
-

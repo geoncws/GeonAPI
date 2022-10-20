@@ -6,7 +6,7 @@ namespace GeonAPI.Persistence
 {
     public static class ServiceRegistiration
     {
-        public static void AddPersistenceService(this IServiceCollection serviceCollection)
+        public static void AddPersistenceServices(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddDbContext<GeonAPIDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString));
         }

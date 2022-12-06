@@ -25,6 +25,12 @@
     <None Remove="Abstractions\Storage\Local\" />
     <None Remove="Enums\" />
     <None Remove="Abstractions\Storage\Azure\" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Features\" />
+    <None Remove="Features\Commands\" />
+    <None Remove="Features\Queries\" />
+    <None Remove="Features\Queries\GetAllProduct\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
@@ -38,11 +44,17 @@
     <Folder Include="Abstractions\Storage\Local\" />
     <Folder Include="Enums\" />
     <Folder Include="Abstractions\Storage\Azure\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Queries\" />
+    <Folder Include="Features\Queries\GetAllProduct\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="FluentValidation" Version="11.4.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
 </Project>

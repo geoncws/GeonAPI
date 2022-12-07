@@ -10,6 +10,8 @@ namespace GeonAPI.Domain.Entities
         public decimal Stock { get; set; }
         public bool Visible { get; set; }
         public bool Deleted { get; set; }
+        public long Price { get; set; }
         public Category Category { get; set; }
+        public IEnumerable<Order> Orders { get; set; }
     }
 }

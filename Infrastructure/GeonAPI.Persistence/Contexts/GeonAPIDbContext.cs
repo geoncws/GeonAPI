@@ -13,6 +13,8 @@ namespace GeonAPI.Persistence.Contexts
 
         public DbSet<Multimedia> Multimedias { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Page> Pages { get; set; }
         public DbSet<Category> Categories { get; set; }
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -22,9 +24,9 @@ namespace GeonAPI.Persistence.Contexts
             {
                 _ = data.State switch
                 {
-                    EntityState.Added=> data.Entity.CreatedDate,
+                    EntityState.Added => data.Entity.CreatedDate,
                     EntityState.Modified => data.Entity.UpdatedDate,
-                    _=>DateTime.UtcNow
+                    _ => DateTime.UtcNow
                 };
             }
             return await base.SaveChangesAsync(cancellationToken);

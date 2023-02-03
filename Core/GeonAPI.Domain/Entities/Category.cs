@@ -1,11 +1,17 @@
-﻿using System;
-using GeonAPI.Domain.Entities.Common;
+﻿using GeonAPI.Domain.Entities.Common;
 
 namespace GeonAPI.Domain.Entities
 {
-    public class Category : BaseEntity
+    public partial class Category : BaseEntity
     {
-        public string? Name { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public Category()
+        {
+            this.CategoryTranslates = new HashSet<CategoryTranslate>();
+            this.SubCategories = new HashSet<Category>();
+        } 
+        public Nullable<Guid> CategoryId { get; set; }
+        public virtual Category ParentCategory { get; set; }
+        public virtual ICollection<CategoryTranslate> CategoryTranslates { get; set; }
+        public virtual ICollection<Category> SubCategories { get; set; }
     }
 }

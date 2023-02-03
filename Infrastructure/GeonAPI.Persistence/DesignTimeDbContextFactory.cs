@@ -9,7 +9,12 @@ namespace GeonAPI.Persistence
         public GeonAPIDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<GeonAPIDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseSqlServer(Configuration.GetConnectionString);
+            dbContextOptionsBuilder.UseSqlServer(Configuration.GetConnectionString, builder =>
+            {
+                builder.EnableRetryOnFailure(
+                    maxRetryCount: 6,
+                    maxRetryDelay: TimeSpan.FromSeconds(60), errorNumbersToAdd: new[] { 4060 });
+            });
             return new(dbContextOptionsBuilder.Options);
         }
     }

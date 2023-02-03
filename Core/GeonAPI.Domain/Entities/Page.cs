@@ -1,12 +1,13 @@
-﻿using System;
-using GeonAPI.Domain.Entities.Common;
+﻿using GeonAPI.Domain.Entities.Common;
 
 namespace GeonAPI.Domain.Entities
 {
-    public class Page : BaseEntity
+    public partial class Page : BaseEntity
     {
-        public string? Name { get; set; }
-        public string? Description { get; set; }
-        public bool Visible { get; set; }
+        public Page()
+        {
+            this.PageTranslates = new HashSet<PageTranslate>();
+        }
+        public virtual ICollection<PageTranslate> PageTranslates { get; set; }
     }
 }

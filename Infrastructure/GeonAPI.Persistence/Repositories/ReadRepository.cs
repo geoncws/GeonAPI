@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using GeonAPI.Application.Repositories;
+using GeonAPI.Domain.Entities;
 using GeonAPI.Domain.Entities.Common;
 using GeonAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,7 @@ namespace GeonAPI.Persistence.Repositories
 
         public IQueryable<T> GetAll(bool tracking = true)
         {
+            
             var query = Table.AsQueryable();
             if (!tracking) query = query.AsNoTracking();
             return query;

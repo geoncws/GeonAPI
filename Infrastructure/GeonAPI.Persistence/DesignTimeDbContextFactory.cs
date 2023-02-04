@@ -13,7 +13,8 @@ namespace GeonAPI.Persistence
             {
                 builder.EnableRetryOnFailure(
                     maxRetryCount: 6,
-                    maxRetryDelay: TimeSpan.FromSeconds(60), errorNumbersToAdd: new[] { 4060 });
+                    maxRetryDelay: TimeSpan.FromSeconds(60),
+                    errorNumbersToAdd: new[] { 4060 });
             });
             return new(dbContextOptionsBuilder.Options);
         }

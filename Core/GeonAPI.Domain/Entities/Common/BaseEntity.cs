@@ -1,12 +1,12 @@
 ﻿namespace GeonAPI.Domain.Entities.Common
 {
-    public partial class BaseEntity
+    public class BaseEntity
     {
         public Guid Id { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
-        virtual public DateTime UpdatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
 
         public bool Deleted { get; set; }
 

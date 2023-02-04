@@ -2,8 +2,8 @@
 
 namespace GeonAPI.Domain.Entities
 {
-    public partial class ProductTranslate : PageTranslateEntity
+    public class ProductTranslate : PageTranslateEntity
     {
-        public virtual Product Product { get; set; }
+        public Product Product { get; set; }
     }
 }

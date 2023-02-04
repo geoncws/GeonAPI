@@ -2,8 +2,8 @@
 
 namespace GeonAPI.Domain.Entities
 {
-    public partial class PageTranslate : PageTranslateEntity
+    public class PageTranslate : PageTranslateEntity
     {
-        public virtual Page Page { get; set; }
+        public Page Page { get; set; }
     }
 }

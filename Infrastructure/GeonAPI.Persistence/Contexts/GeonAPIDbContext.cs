@@ -46,8 +46,7 @@ namespace GeonAPI.Persistence.Contexts
             modelBuilder.Entity<Translate>().ToTable("Translates", builder =>
             {
                 builder.IsTemporal();
-            });
-
+            }); 
             modelBuilder.Entity<Language>().HasData(
                 new Language() { Code = "tr-tr", Name = "Türkçe", Visible = true });
             modelBuilder.Entity<PageTranslateEntity>().HasIndex(pt => pt.Slug).IsUnique();

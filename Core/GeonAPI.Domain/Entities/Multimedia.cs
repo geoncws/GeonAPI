@@ -3,7 +3,7 @@ using GeonAPI.Domain.Entities.Common;
 
 namespace GeonAPI.Domain.Entities
 {
-    public partial class Multimedia : BaseEntity
+    public class Multimedia : BaseEntity
     {
         public string FileName { get; set; }
         public string Path { get; set; }

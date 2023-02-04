@@ -3,7 +3,7 @@ using GeonAPI.Domain.Entities.Common;
 
 namespace GeonAPI.Domain.Entities
 {
-    public partial class Language
+    public class Language
     {
         public Language()
         {
@@ -15,6 +15,6 @@ namespace GeonAPI.Domain.Entities
         [MaxLength(50)]
         public string Name { get; set; }
         public bool Visible { get; set; }
-        public virtual ICollection<Translate> Translates { get; set; }
+        public ICollection<Translate> Translates { get; set; }
     }
 }

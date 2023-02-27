@@ -17,4 +17,3 @@ namespace GeonAPI.Application.Validators.Products
         }
     }
 }
-

@@ -11,10 +11,14 @@ namespace GeonAPI.Persistence.Contexts
         { }
         public DbSet<Language> Languages { get; set; }
         public DbSet<Translate> Translates { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; } 
         public DbSet<Page> Pages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Multimedia> Multimedias { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
+
+
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var datas = ChangeTracker.Entries<BaseEntity>();

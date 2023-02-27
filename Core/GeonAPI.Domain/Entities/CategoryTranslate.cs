@@ -5,7 +5,7 @@ namespace GeonAPI.Domain.Entities
 {
     public class CategoryTranslate : Translate
     {
-        [MaxLength(50)]
+        [MaxLength(150)]
         public string CategoryName { get; set; }
         public Category Category { get; set; }
     }

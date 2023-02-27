@@ -119,6 +119,41 @@ namespace GeonAPI.Persistence.Migrations
                             }));
                 });
 
+            modelBuilder.Entity("GeonAPI.Domain.Entities.Customer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NameSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("GeonAPI.Domain.Entities.Language", b =>
                 {
                     b.Property<string>("Code")
@@ -173,6 +208,9 @@ namespace GeonAPI.Persistence.Migrations
                     b.Property<string>("StorageType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("Visible")
                         .HasColumnType("bit");
@@ -279,8 +317,8 @@ namespace GeonAPI.Persistence.Migrations
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasIndex("CategoryId");
 
@@ -307,12 +345,10 @@ namespace GeonAPI.Persistence.Migrations
                         .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Slug")
-                        .IsRequired()
                         .HasMaxLength(170)
                         .HasColumnType("nvarchar(170)");
 

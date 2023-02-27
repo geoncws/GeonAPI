@@ -31,6 +31,9 @@
     <None Remove="Features\Commands\" />
     <None Remove="Features\Queries\" />
     <None Remove="Features\Queries\GetAllProduct\" />
+    <None Remove="Repositories\Customer\" />
+    <None Remove="ViewModels\Customers\" />
+    <None Remove="Validators\Customers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
@@ -48,11 +51,14 @@
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Queries\" />
     <Folder Include="Features\Queries\GetAllProduct\" />
+    <Folder Include="Repositories\Customer\" />
+    <Folder Include="ViewModels\Customers\" />
+    <Folder Include="Validators\Customers\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
-    <PackageReference Include="FluentValidation" Version="11.4.0" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.5.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />

@@ -16,8 +16,12 @@ builder.Services.AddInfrastructureServices();
 //builder.Services.AddStorage<LocalStorage>();
 //builder.Services.AddStorage(StorageType.Local);
 builder.Services.AddStorage<LocalStorage>();
+
+
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
-    policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
+    policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()
+));
+
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
     .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValidator>())
     .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
@@ -35,13 +39,8 @@ if (app.Environment.IsDevelopment())
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseStaticFiles();
-app.UseCors();
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
+app.UseCors(); 
+app.UseHttpsRedirection(); 
+app.UseAuthorization(); 
+app.MapControllers(); 
 app.Run();
-

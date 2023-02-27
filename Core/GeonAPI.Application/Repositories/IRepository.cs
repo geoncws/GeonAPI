@@ -1,6 +1,4 @@
-﻿using System;
-using GeonAPI.Domain.Entities;
-using GeonAPI.Domain.Entities.Common;
+﻿using GeonAPI.Domain.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace GeonAPI.Application.Repositories
